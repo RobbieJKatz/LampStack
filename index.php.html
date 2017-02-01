@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title>PHP Test</title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="1404.47">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 11.0px Menlo; color: #afad24; -webkit-text-stroke: #afad24}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 11.0px Menlo; color: #000000; -webkit-text-stroke: #000000}
+    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 11.0px Menlo; color: #34bd26; -webkit-text-stroke: #34bd26}
+    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 11.0px Menlo; color: #5330e1; -webkit-text-stroke: #5330e1}
+    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; line-height: 13.0px; font: 11.0px Menlo; color: #cbcbcb; -webkit-text-stroke: #cbcbcb}
+    span.s1 {font-kerning: none}
+    span.s2 {font-kerning: none; color: #000000; -webkit-text-stroke: 0px #000000}
+    span.s3 {font-kerning: none; color: #afad24; -webkit-text-stroke: 0px #afad24}
+    span.s4 {font-kerning: none; color: #cbcbcb; -webkit-text-stroke: 0px #cbcbcb}
+  </style>
+</head>
+<body>
+<p class="p1"><span class="s1"><b>&lt;html&gt;</b></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space"> </span></span><span class="s1"><b>&lt;head&gt;</b></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">  </span></span><span class="s1"><b>&lt;title&gt;</b></span><span class="s2">PHP Test</span><span class="s1"><b>&lt;/title&gt;</b></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space"> </span></span><span class="s1"><b>&lt;/head&gt;</b></span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space"> </span></span><span class="s1"><b>&lt;body&gt;</b></span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space"> </span>&lt;form action = </span><span class="s3"><b>"&lt;?php $_PHP_SELF ?&gt;"</b></span><span class="s1"> method = </span><span class="s3"><b>"GET"</b></span><span class="s1">&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">         </span>Name: &lt;input type = </span><span class="s3"><b>"text"</b></span><span class="s1"> name = </span><span class="s3"><b>"name"</b></span><span class="s1"> /&gt;</span></p>
+<p class="p2"><span class="s1"><span class="Apple-converted-space">         </span>&lt;input type = </span><span class="s3"><b>"submit"</b></span><span class="s1"><span class="Apple-converted-space">  </span>/&gt;</span></p>
+<p class="p1"><span class="s2"><span class="Apple-converted-space">      </span></span><span class="s1"><b>&lt;/form&gt;</b></span></p>
+<p class="p3"><span class="s1"><b>&lt;?php</b></span></p>
+<p class="p2"><span class="s1">$naming = </span><span class="s3"><b>"robbie"</b></span><span class="s1">;</span></p>
+<p class="p4"><span class="s1"><b>// Create connection</b></span></p>
+<p class="p1"><span class="s2">$conn = </span><span class="s1"><b>new</b></span><span class="s2"> </span><span class="s4">mysqli(</span><span class="s1"><b>"127.0.0.1"</b></span><span class="s2">, </span><span class="s1"><b>"root"</b></span><span class="s2">, </span><span class="s1"><b>"thingkingsql"</b></span><span class="s2">, </span><span class="s1"><b>"robbie"</b></span><span class="s2">);</span></p>
+<p class="p1"><span class="s2">$sql = </span><span class="s1"><b>"SELECT<span class="Apple-converted-space">  </span>surname FROM names where name = '"</b></span><span class="s2">.$_GET['name'].</span><span class="s1"><b>"'"</b></span><span class="s2">;</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">$result = </span><span class="s4">mysqli_query(</span><span class="s1">$conn, $sql);</span></p>
+<p class="p5"><span class="s2">$row = </span><span class="s1">mysqli_fetch_array(</span><span class="s2">$result);</span></p>
+<p class="p2"><span class="s1">echo $row['surname'];</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1">$conn-&gt;</span><span class="s4">close(</span><span class="s1">);</span></p>
+<p class="p3"><span class="s1"><b>?&gt;</b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+<p class="p1"><span class="s1"><b>&lt;/body&gt;</b></span></p>
+<p class="p1"><span class="s1"><b>&lt;/html&gt;</b></span></p>
+<p class="p2"><span class="s1"><br>
+</span></p>
+</body>
+</html>
