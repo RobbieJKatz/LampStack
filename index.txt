@@ -1,0 +1,24 @@
+<html>
+ <head>
+  <title>PHP Test</title>
+ </head>
+ <body>
+ <form action = "<?php $_PHP_SELF ?>" method = "GET">
+         Name: <input type = "text" name = "name" />
+         <input type = "submit"  />
+      </form>
+<?php
+$naming = "robbie";
+// Create connection
+$conn = new mysqli("127.0.0.1", "root", "thingkingsql", "robbie");
+$sql = "SELECT  surname FROM names where name = '".$_GET['name']."'";
+ 
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_array($result);
+echo $row['surname'];
+ 
+$conn->close();
+?>
+
+</body>
+</html>
